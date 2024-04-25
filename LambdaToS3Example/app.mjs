@@ -8,8 +8,16 @@ import {v4} from 'uuid';
 const s3Client = new S3Client({region: process.env.AWS_DEFAULT_REGION});
 const Bucket = 'testing-lambda-to-s3';
 
+/**
+ * Will Upload a file to S3 and generate a signed url
+ *
+ * @param readableStream
+ * @param filename
+ * @param contentType
+ * @returns {Promise<string>}
+ */
 async function uploadToS3(readableStream, filename, contentType) {
-    const passThroughStream = new PassThrough()
+    const passThroughStream = new PassThrough();
     const Key = `${v4()}-${filename}`;
     console.log(`Using filename: ${Key}`);
     try {

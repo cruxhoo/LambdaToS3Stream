@@ -107,9 +107,9 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `hello-world/tests` folder in this project. Use NPM to install the [Mocha test framework](https://mochajs.org/) and run unit tests.
 
 ```bash
-S3StreamFromLambda$ cd hello-world
-hello-world$ npm install
-hello-world$ npm run test
+S3StreamFromLambda$ cd LambdaToS3Example
+LambdaToS3Example$ npm install
+LambdaToS3Example$ npm run test
 ```
 
 ## Cleanup
